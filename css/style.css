@@ -1,0 +1,385 @@
+/* ==== Variables de paleta ==== */
+:root {
+    --azul-vibrante:   #007AFF;
+    --violeta-fuerte:  #9B51E0;
+    --magenta-neon:    #EB00FF;
+    --cian-claro:      #00E5FF;
+    --azul-oscuro:     #1A237E;
+    --blanco:          #FFFFFF;
+    --gris-claro:      #F5F5F5;
+
+    --grad-header:     linear-gradient(135deg, var(--azul-oscuro) 0%, var(--violeta-fuerte) 100%);
+    --grad-secondary:  linear-gradient(135deg, var(--violeta-fuerte) 0%, var(--magenta-neon) 100%);
+}
+
+/* ==== Reset y base ==== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+    background: var(--grad-header) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+.navbar.scrolled {
+    /* Al hacer scroll, fondo semitransparente con blur */
+    background: rgba(26, 35, 126, 0.6) !important;
+    backdrop-filter: blur(8px);
+}
+.navbar-brand {
+    font-weight: 700;
+}
+.navbar-brand .bi-code-slash {
+    color: var(--cian-claro);
+    transition: transform .3s;
+}
+.navbar-brand .bi-code-slash:hover {
+    transform: rotate(20deg);
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    transition: color .3s;
+}
+.nav-link:hover {
+    color: var(--blanco) !important;
+}
+.btn-cta {
+    background-image: var(--grad-secondary);
+    color: var(--blanco);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform .3s, opacity .3s;
+}
+.btn-cta:hover {
+    transform: translateY(-3px) scale(1.05);
+    opacity: .9;
+}
+
+/* ==== Logo navbar ==== */
+.logo-navbar {
+    height: 70px;
+    width: auto;
+    background: transparent;
+    display: block;
+}
+
+/* ==== Hero ==== */
+#hero {
+    background: var(--grad-header);
+    position: relative;
+    overflow: hidden;
+}
+#hero h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+#hero .lead {
+    color: rgba(255, 255, 255, 0.85);
+}
+#hero .badge {
+    font-weight: 600;
+    border: 2px solid var(--cian-claro);
+    color: var(--cian-claro);
+}
+#hero .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.7);
+    color: #fff;
+    transition: background .3s;
+}
+#hero .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+#hero .bg-dark.bg-opacity-50 {
+    background: rgba(26, 35, 126, 0.5) !important;
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+}
+#hero .bg-dark.bg-opacity-50 .bi {
+    transition: transform .3s;
+}
+#hero .bg-dark.bg-opacity-50 .bi:hover {
+    transform: scale(1.2);
+}
+
+/* ==== Títulos de sección ==== */
+section h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--cian-claro), var(--magenta-neon));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ==== CSS para sección Servicios ==== */
+#servicios {
+    background: var(--gris-claro);
+    color: var(--azul-oscuro);
+    padding: 5rem 0;
+}
+#servicios h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+#servicios p {
+    color: rgba(26, 35, 126, .8);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+.service-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
+    transition: transform .3s, box-shadow .3s;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+.icon-wrapper {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    color: var(--blanco);
+    margin: 0 auto 1rem;
+    transition: transform .3s;
+}
+.icon-wrapper:hover {
+    transform: scale(1.2);
+}
+.bg-cian {
+    background: var(--cian-claro) !important;
+}
+.bg-secondary {
+    background: var(--violeta-fuerte) !important;
+}
+.bg-magenta {
+    background: var(--magenta-neon) !important;
+}
+.bg-primary {
+    background: var(--azul-vibrante) !important;
+}
+.bg-success {
+    background: #28a745 !important;
+}
+.service-card .card-title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    color: var(--azul-oscuro);
+}
+.service-card .card-text {
+    color: rgba(26, 35, 126, .8);
+    margin-bottom: 1rem;
+}
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+.service-card ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+    color: var(--azul-oscuro);
+}
+.service-card ul li .bi-check-circle-fill {
+    color: var(--cian-claro);
+    margin-right: .5rem;
+}
+
+/* ==== Sección “¿Por qué elegirnos?” ==== */
+#why {
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+}
+#why h2 {
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+}
+#why p {
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.1rem;
+}
+.feature-icon {
+    width: 220px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s, box-shadow .3s;
+}
+.feature-icon i {
+    font-size: 2.5rem;
+    color: var(--blanco);
+}
+.feature-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.bg-ellipse-cian {
+    background: linear-gradient(135deg, var(--cian-claro), var(--azul-vibrante));
+}
+.bg-ellipse-secondary {
+    background: linear-gradient(135deg, var(--violeta-fuerte), var(--magenta-neon));
+}
+.bg-ellipse-success {
+    background: #28a745;
+}
+
+/* ==== Proyectos Destacados ==== */
+#proyectos {
+    background: var(--azul-oscuro) !important;
+    padding: 5rem 0;
+}
+#proyectos h2 {
+    font-size: 2.75rem;
+    color: var(--azul-vibrante);
+    background: none;
+    margin-bottom: 2.5rem;
+}
+#proyectos .card {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    color: var(--blanco);
+    transition: transform .3s, box-shadow .3s;
+}
+#proyectos .ratio {
+    background: transparent !important;
+    border-bottom: 4px solid var(--cian-claro);
+}
+#proyectos .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+#proyectos .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    color: var(--blanco);
+}
+#proyectos .card-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
+}
+
+/* ==== Fondos generales de cards ==== */
+.card {
+    border-radius: 1rem;
+    background: rgba(26, 35, 126, 0.3);
+    transition: transform .3s, box-shadow .3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.card-body {
+    padding: 2rem;
+}
+.bg-gradient-secondary {
+    background-image: var(--grad-secondary) !important;
+}
+
+/* ==== Formularios ==== */
+.form-control,
+textarea {
+    border-radius: .75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--blanco);
+    padding: 1rem;
+    transition: background .3s, border-color .3s;
+}
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--cian-claro);
+    box-shadow: none;
+    color: var(--blanco);
+}
+.form-label {
+    color: var(--blanco);
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+.form-select {
+    position: relative;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid var(--cian-claro) !important;
+    color: var(--blanco) !important;
+    padding: 1rem;
+}
+.form-select option {
+    background: var(--azul-oscuro) !important;
+    color: var(--blanco) !important;
+}
+.form-select option:checked {
+    background: var(--cian-claro) !important;
+    color: var(--azul-oscuro) !important;
+}
+.form-select option:hover {
+    background: var(--violeta-fuerte) !important;
+    color: var(--blanco) !important;
+}
+
+/* ==== Footer ==== */
+footer {
+    background: var(--azul-oscuro);
+    color: var(--gris-claro);
+    padding-top: 2rem;
+}
+footer a {
+    color: var(--gris-claro);
+    transition: color .3s;
+}
+footer a:hover {
+    color: var(--blanco);
+}
+footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+footer p {
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+@media (max-width: 767px) {
+    #hero .display-3 {
+        font-size: 2rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 991px) {
+  /* Que el menú ocupe todo el ancho en móvil y elimine la franja azul */
+  .navbar-collapse {
+    right: 0 !important;
+    width: 100% !important;
+  }
+}
