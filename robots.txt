@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://paurodriguez-17.github.io/Nova-Webs/sitemap.xml
+Sitemap: https://www.novaawebs.com/sitemap.xml
