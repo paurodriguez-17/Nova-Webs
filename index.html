@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nova Webs crea páginas web, sistemas personalizados, integración de APIs e inteligencia artificial para negocios modernos. Soluciones digitales eficientes y a medida.">
+    <meta name="keywords" content="desarrollo web, sistemas personalizados, páginas web, integración de APIs, IA, mantenimiento web, Nova Webs, chatbots, automatización digital">
+    <meta name="author" content="Nova Webs">
+    <meta property="og:title" content="Nova Webs – Tu socio tecnológico">
+    <meta property="og:description" content="Desarrollamos páginas web, sistemas personalizados, integración de APIs y soluciones con IA.">
+    <meta property="og:image" content="https://paurodriguez-17.github.io/Nova-Webs/img/logo_transparent.png">
+    <meta property="og:url" content="https://paurodriguez-17.github.io/Nova-Webs/">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+
     <title>Nova Webs – Tu socio tecnológico</title>
-    <!-- Bootstrap CSS v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- AOS Animations -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        // Reemplaza con tu Public Key (API Keys → Public Key)
         emailjs.init('6g0Dz3hEh1mmrDHZY');
     </script>
 </head>
@@ -260,7 +267,8 @@
         <section id="why" class="py-5">
             <div class="container text-center" data-aos="fade-up">
                 <h2>¿Por qué elegirnos?</h2>
-                <p class="mb-5">Experiencia, calidad y resultados que hablan por sí solos</p>
+                <p class="mb-5">Experiencia en desarrollo web, calidad de sistemas personalizados y resultados que
+                    impulsan negocios.</p>
                 <div class="row justify-content-center gx-5">
                     <div class="col-md-4">
                         <div class="feature-icon bg-ellipse-cian">
@@ -489,7 +497,7 @@
                         <li><a href="#servicios" class="link-light text-decoration-none">Integración de APIs</a></li>
                         <li><a href="#servicios" class="link-light text-decoration-none">Sistemas Personalizados</a>
                         </li>
-                        <li><a href="#servicios" class="link-light text-decoration-none">IA Intregada</a></li>
+                        <li><a href="#servicios" class="link-light text-decoration-none">IA Integrada</a></li>
                         <li><a href="#servicios" class="link-light text-decoration-none">Cursos Personalizados</a></li>
                     </ul>
                 </div>
@@ -526,36 +534,9 @@
         </div>
     </footer>
 </body>
-<script>
-    const nav = document.querySelector('.navbar');
-    function handleScroll() {
-        nav.classList.toggle('scrolled', window.scrollY > 50);
-    }
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('load', handleScroll);
-</script>
-<script>
-    document.getElementById('contact-form')
-        .addEventListener('submit', function (e) {
-            e.preventDefault();
-            emailjs.sendForm(
-                'service_q3mro1z',    // tu Service ID
-                'template_1c0b3oe',   // tu Template ID
-                this,
-                '6g0Dz3hEh1mmrDHZY' // misma Public Key
-            )
-                .then(() => {
-                    alert('¡Mensaje enviado correctamente!');
-                    this.reset();
-                }, err => {
-                    console.error('Error al enviar:', err);
-                    alert('Hubo un error al enviar, revisa la consola.');
-                });
-        });
-</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script> AOS.init({ duration: 800, once: true }); </script>
+<script src="/js/script.js"></script>
 </body>
 
 </html>
